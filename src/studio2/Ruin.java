@@ -22,22 +22,27 @@ public class Ruin {
 		int winLimit = in.nextInt();
 		
 		
-		String success;
-		boolean success1 = Math.random() > 0.3;
+		int simulations = 1;
 		
-		if (Math.random() > 0.3)		
+
+		while(startAmount>=0 && winLimit>= startAmount)
 		{
-			startAmount++;
-			System.out.println("Simulation 1: " + startAmount + " WIN");
+			if (Math.random()< winChance)
+			{
+			startAmount++;	
+			System.out.println("Simulation: " + startAmount + " WIN") ;
+	
 		}
-		
-		else 
+			else
+
 		{
 			startAmount--;
-			System.out.println("Simulation 1: " + startAmount + " LOSE");
-	}
-		
-		
+			System.out.println("Simulation: " + startAmount + " LOSE");
+			
+		}
+		}
+		 
+			
 		
 		
 		
